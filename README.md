@@ -27,6 +27,6 @@ This will, for example, give you a prompt with the time prefixed in blue color.
 Rationale
 =========
 
-I often find myself accidentally starting a R command without realizing how long it will take to execute. Only after the command has been running for some arbitrary time do I realise that I should have at least wrapped it inside a `system.time` to determine how long it takes for the command to run. 
+I often find myself accidentally starting a R command without realizing how long it will take to execute. Only after the command has been running for some arbitrary time do I realise that I should have at least wrapped it inside a `system.time` to get an idea of how long it takes to run. 
 
-This plugin solves the problem by because by merely looking at the time-stamps on the R console, I can make a good estimate of how long each command ran for.
+This plugin solves the problem by appending the approximate start time in form of time-stamps to each command. Now by merely looking at the time-stamps on the R console, one can make a good estimate of how long each command ran.
