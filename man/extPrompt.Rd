@@ -1,13 +1,23 @@
 \name{extPrompt}
 \alias{extPrompt}
+\alias{extPrompt.reset}
 \title{Embed time in the R prompt}
 \description{
   Embeds the current time in \samp{[HH:MM:SS]} format as a prefix in the R
   prompt. The function is called automatically when the package is loaded.
 }
+
 \usage{
-extPrompt(silent=T)
-extPrompt.reset(silent=T)
+extPrompt(silent=F)
+extPrompt.reset(silent=F)
+}
+
+\arguments{
+    \item{silent}{
+        The \code{silent} argument supresses the warnings shown if the prefix
+        is already present (during \code{extPrompt()}) or is absent (during
+        \code{extPrompt.reset()}). Default value is \code{FALSE}.
+    }
 }
 
 \value{
@@ -21,9 +31,6 @@ extPrompt.reset(silent=T)
     any occurances of characters which are treated as special by
     \code{strftime} will still be replaced in the prompt.
 
-    The \code{silent} argument supresses the warnings shown if the prefix is
-    already present (during \code{extPrompt()}) or is absent (during
-    \code{extPrompt.reset()}).
 }
 \seealso{
 \link{strftime}, \link{options}

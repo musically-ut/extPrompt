@@ -23,7 +23,7 @@ int extPrompt_ReadConsole(const char *old_prompt, unsigned char *buf, int len,
     struct tm *local_time = localtime(&t);
 
     if (local_time == NULL) {
-        fprintf(stderr, "Unable to get local time.\n");
+        REprintf("Unable to get local time.\n");
         new_prompt = old_prompt;
     } else {
         if (strftime(replaced_prompt, CONSOLE_PROMPT_SIZE, old_prompt, local_time) == 0) {

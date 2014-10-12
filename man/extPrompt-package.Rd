@@ -1,6 +1,5 @@
 \name{extPrompt-package}
 \alias{extPrompt-package}
-\alias{extPrompt}
 \docType{package}
 \title{
 Embed current time in the R prompt
