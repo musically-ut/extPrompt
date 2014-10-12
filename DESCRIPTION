@@ -1,0 +1,13 @@
+Package: extPrompt
+Title: Include current time in your R prompt
+Version: 0.1
+Date: 2014-10-12
+Authors@R: "Utkarsh Upadhyay <mail@musicallyut.in> [aut, cre]"
+Description: This package enables embedding time in the R prompt by treating
+   the options()$prompt string as a strftime format string. The package
+   contains a C library which replaces the default R_ReadConsole function. This
+   is the function responsible for reading one line of input when R is running
+   in interactive mode.
+Depends: R (>= 3.0.2)
+License: MIT
+LazyData: true
