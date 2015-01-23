@@ -1,6 +1,24 @@
 extPrompt
 =========
 
+----
+**Update**: [Prof. Duncan Temple Lang](http://www.stat.ucdavis.edu/~duncan/), one of the core developers of R, actually [gave a simpler way](https://stat.ethz.ch/pipermail/r-devel/2014-October/069922.html) of achieving the same thing:
+
+```
+invisible(addTaskCallback(function(...) { 
+                 options(prompt = format(Sys.time(), "[%H:%M:%S] >"))
+                 TRUE
+                 }))
+
+```
+
+That almost subsumes the functionality of this package, with one minor shortcoming:
+
+> The only difference is that when you hit return at the prompt with no expression,
+> the prompt doesn't change (since there was no task).
+
+----
+
 Embed current time in the R prompt.
 
 Usage:
